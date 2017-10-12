@@ -1,0 +1,21 @@
+{
+  "name": "nodetest",
+  "version": "1.0.0",
+  "description": "test work",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js --presets es2015,stage-2"
+  },
+  "author": "goti2",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "dependencies": {
+    "config": "^1.26.2",
+    "mongoose": "^4.12.1",
+    "url-pattern": "^1.0.3"
+  }
+}
