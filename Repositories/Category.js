@@ -9,7 +9,7 @@ class CategoryRepository
     {
         mongoose.connect(config.get('db.uri'));
 
-        this.storage = mongoose.model('Category', new CategoryEntity);
+        this.storage = mongoose.model(CategoryEntity.CollectionName, new CategoryEntity);
     }
 
     async Create(category)

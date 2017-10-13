@@ -1,4 +1,5 @@
 import PostRepository from './../Repositories/Post';
+import PostConverter from './../Converter/Post';
 
 
 export default (Router) => {
@@ -23,7 +24,11 @@ export default (Router) => {
 
     Router.POST('/api/post', async (req, res) => {
 
-        const post = await PostRepository.Save(req.post);
+        const entity = PostConverter.GetEntity(req.post);
+        
+        const post = await PostRepository.Save(entity);
+        // Or use
+        //const post = await entity.save();
 
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.end(JSON.stringify(post));

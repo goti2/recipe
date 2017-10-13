@@ -16,6 +16,7 @@
   "dependencies": {
     "config": "^1.26.2",
     "mongoose": "^4.12.1",
-    "url-pattern": "^1.0.3"
+    "url-pattern": "^1.0.3",
+    "xss-filters": "^1.2.7"
   }
 }
